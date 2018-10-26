@@ -10,13 +10,12 @@ import java.util.ArrayList;
 public class PruebaBDxml {
      public static void main(String[] args) {
             
-            Persona persona1 = new Persona ("jose","fsededf.es","Bami3","bami3");
-            Persona persona2 = new Persona ("pedro","fsdf.es","Bami4","bami6");
+            Usuario user1 = new Usuario ("jose","fsededf.es","Bami3","bami3");
+            Usuario user2 = new Usuario ("pedro","fsdf.es","Bami4","bami6");
             Usuarios listaUsuarios = new Usuarios();
-            listaUsuarios.add(persona1);
-            listaUsuarios.add(persona2);
+            listaUsuarios.add(user1);
          try{
-            JAXBContext contexto = JAXBContext.newInstance(Usuarios.class);// por que user1?
+            JAXBContext contexto = JAXBContext.newInstance(Usuarios.getClass());// por que user1?
             File file = new File ("parking.xml");
             Marshaller marshaller = contexto.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
