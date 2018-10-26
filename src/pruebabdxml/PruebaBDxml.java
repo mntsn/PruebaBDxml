@@ -20,8 +20,8 @@ public class PruebaBDxml {
             Marshaller marshaller = contexto.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             File file = new File ("parking.xml");
-            marshaller.marshal(persona1, file);//como imprimir toda la lista?
-            marshaller.marshal(persona1, System.out); 
+            marshaller.marshal(listaUsuarios, file);//como imprimir toda la lista?
+            marshaller.marshal(listaUsuarios, System.out); 
          } 
          catch (javax.xml.bind.JAXBException ex) {
             java.util.logging.Logger.getLogger("global").log(java.util.logging.Level.SEVERE,null,ex);
